@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "BreadthFirstSearch.cpp"
+#include "Breadth-FirstSearch.cpp"
 
 TEST(SampleTest, Test) {
 	Node graph("A");
