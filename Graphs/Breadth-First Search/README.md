@@ -1,30 +1,31 @@
 # Breadth-First Search
 
 This method is implemented within a Node class. 
-A Node class has a 'name' and 'children' nodes, which form a tree like structure.  
-The 'breadthFirstSearch' method taked in an empty array, traverse the tree using the Breadth-First Search approach 
+A Node class has a 'name' and 'children' nodes, which form a tree like structure.  \
+The 'breadthFirstSearch' method taked in an empty array, traverse the tree using the Breadth-First Search approach \
 (navigating the tree from left to right), stores all of the nodes's names in the input array and returns it.
 
 # Sample Input
 
 {
-  "graph": {
-    "nodes": [
-      {"children": ["B", "C", "D"], "id": "A", "value": "A"},
-      {"children": ["E", "F"], "id": "B", "value": "B"},
-      {"children": [], "id": "C", "value": "C"},
-      {"children": ["G", "H"], "id": "D", "value": "D"},
-      {"children": [], "id": "E", "value": "E"},
-      {"children": ["I", "J"], "id": "F", "value": "F"},
-      {"children": ["K"], "id": "G", "value": "G"},
-      {"children": [], "id": "H", "value": "H"},
-      {"children": [], "id": "I", "value": "I"},
-      {"children": [], "id": "J", "value": "J"},
-      {"children": [], "id": "K", "value": "K"}
-    ],
-    "startNode": "A"
-  }
-}
+  "graph": {\
+    "nodes": [\
+      {"children": ["B", "C", "D"], "id": "A", "value": "A"},\
+      {"children": ["E", "F"], "id": "B", "value": "B"},\
+      {"children": [], "id": "C", "value": "C"},\
+      {"children": ["G", "H"], "id": "D", "value": "D"},\
+      {"children": [], "id": "E", "value": "E"},\
+      {"children": ["I", "J"], "id": "F", "value": "F"},\
+      {"children": ["K"], "id": "G", "value": "G"},\
+      {"children": [], "id": "H", "value": "H"},\
+      {"children": [], "id": "I", "value": "I"},\
+      {"children": [], "id": "J", "value": "J"},\
+      {"children": [], "id": "K", "value": "K"}\
+    ],\
+    "startNode": "A"\
+  }\
+}\
+
      
 # Sample Output
 ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"]
