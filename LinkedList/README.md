@@ -1,4 +1,4 @@
-# Breadth-First Search
+# Doubly Linked List
 
 This file contains the implementation of a DoublyLinkedList class.
 It containc head and tail, both of which point to either a linked list Node or NULL.
