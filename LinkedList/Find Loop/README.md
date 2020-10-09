@@ -6,7 +6,7 @@ Each `LinkedList` node has an integer value and `next` pointer to the next node 
 
 ### Sample input
 ```javascript
-head = 1 -> 2 -> 3 -> 4 -> 5 -> 6  //head with value 2
+head = 1 -> 2 -> 3 -> 4 -> 5 -> 6  //head with value 0
                       ^         v
                       9 <- 8 <- 7
 ```
