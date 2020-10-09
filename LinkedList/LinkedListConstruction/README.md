@@ -15,8 +15,8 @@ The input nodes can be either new Nodes or nodes that are already in the linked 
 
 # Sample Usage
 
-We are given the following list and 3 stand-alone nodes: 
-1 <-> 2 <-> 3 <-> 4 <-> 5     7, 8, 9 \
+We are given the following list and 3 stand-alone nodes: \
+`1 <-> 2 <-> 3 <-> 4 <-> 5`    ` 7, 8, 9 `
 ```javascript
 setHead(4) - //set the existing node with value 4 as the head
 setTail(7) - //set the new node with value 7 as the tail
