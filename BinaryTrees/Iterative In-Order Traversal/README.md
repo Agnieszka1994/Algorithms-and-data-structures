@@ -25,12 +25,12 @@ callback = someCallback;
 ```
 ### Sample input
 
-callback(4)
-callback(9)
-callback(2)
-callback(1)
-callback(6)
-callback(3)
+callback(4)\
+callback(9)\
+callback(2)\
+callback(1)\
+callback(6)\
+callback(3)\
 callback(7)
 
 ### Space and Time Complexity

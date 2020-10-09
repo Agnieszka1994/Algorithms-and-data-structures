@@ -6,9 +6,9 @@ The 'breadthFirstSearch' method taked in an empty array, traverse the tree using
 (navigating the tree from left to right), stores all of the nodes's names in the input array and returns it.
 
 # Sample Input
-
-{
-  "graph": {\
+```javascript
+graph = [
+"graph": {\
     "nodes": [\
       {"children": ["B", "C", "D"], "id": "A", "value": "A"},\
       {"children": ["E", "F"], "id": "B", "value": "B"},\
@@ -24,9 +24,9 @@ The 'breadthFirstSearch' method taked in an empty array, traverse the tree using
     ],\
     "startNode": "A"\
   }\
-}\
-
-     
+]
+```
+  
 # Sample Output
 ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"]
 

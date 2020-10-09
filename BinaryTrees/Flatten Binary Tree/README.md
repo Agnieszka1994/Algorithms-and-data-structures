@@ -7,6 +7,14 @@ Each Binary Tree node has an integer value, a left child node and a right child 
 
 ### Sample input
 ```javascript
+/* tree =     1
+            /   \
+           2     3
+          / \   / 
+         4   5 6
+            / \
+           7   8  
+*/
 {
   "nodes": [
     {"id": "1", "left": "2", "right": "3", "value": 1},
