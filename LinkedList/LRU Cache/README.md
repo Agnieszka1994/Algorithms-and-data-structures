@@ -1,13 +1,13 @@
 # LRU Cache
 This file contains a class LRUCache (Last Recently Used). 
-The class support:\
-- inserting key-value pairs with the **insertKeyValuePair** method.\
-- retrieving a key's value with the **getValueFromKey** method.\
+The class support:
+- inserting key-value pairs with the **insertKeyValuePair** method.
+- retrieving a key's value with the **getValueFromKey** method.
 - retrieving the most recently used (inserted or retrieved) key with the **getMostRecentKey** method.
-Each of those methods run in constant time.\
+Each of those methods run in constant time.
 
 
-Additionally LRUCache class stores maxSize property set to the size of the cache, which is passed in as an argument during instantiation.\
+Additionally LRUCache class stores maxSize property set to the size of the cache, which is passed in as an argument during instantiation.
 
 
 Inserting a key-value pair with an already existing key replaces the key's value in the cache with the new value.\
@@ -30,4 +30,4 @@ Retrieving a value from a key that is not in the cache returns **nullptr**.
 
 
 ### Space and Time complexity
-O(1) time | O(1) space\
+O(1) time | O(1) space
