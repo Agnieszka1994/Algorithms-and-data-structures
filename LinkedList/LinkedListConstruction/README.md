@@ -1,7 +1,7 @@
 # Doubly Linked List
 
 This file contains the implementation of a DoublyLinkedList class.
-It containc head and tail, both of which point to either a linked list Node or NULL.
+It contains head and tail, both of which point to either a linked list Node or NULL.
 Each Node has an integer value as well as 'prev' node and a 'next' node.
 
 The class support the following methods: 
