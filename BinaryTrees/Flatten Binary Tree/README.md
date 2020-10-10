@@ -30,8 +30,8 @@ Each Binary Tree node has an integer value, a left child node and a right child 
 }
 ```
 ### Sample output
- 
+ ```javascript
  4 <-> 2 <->  7 <-> 5 <->  8 <-> 1 <-> 6 <-> 3 // leftmost node with value 4
-
+```
  ### Space and Time complexity
 O(n) Time | O(d) Space - where "n" is the number of nodes in the Binary Tree and "d" is the depth of the Binary Tree.
