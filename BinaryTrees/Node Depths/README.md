@@ -2,22 +2,17 @@
 
 This function takes in a Binary Tree and returns the sum of its nodes' depths (sum of distances between the root and each node in the Binary Tree).
 
+Each `Binary Tree` node has an integer `value`, a `left` child node and a `right` child node. Children can either be `Binary Tree` nodes or `nullptr`.
+
 ### Sample input
 ```javascript
-{
-  "nodes": [
-    {"id": "1", "left": "2", "right": "3", "value": 1},
-    {"id": "2", "left": "4", "right": "5", "value": 2},
-    {"id": "3", "left": "6", "right": "7", "value": 3},
-    {"id": "4", "left": "8", "right": "9", "value": 4},
-    {"id": "5", "left": null, "right": null, "value": 5},
-    {"id": "6", "left": null, "right": null, "value": 6},
-    {"id": "7", "left": null, "right": null, "value": 7},
-    {"id": "8", "left": null, "right": null, "value": 8},
-    {"id": "9", "left": null, "right": null, "value": 9}
-  ],
-  "root": "1"
-}
+Ttree =       1
+            /   \
+           2     3
+          / \   / \
+         4   5 6   7
+        / \
+       8   9
 ```
 ### Sample output
 

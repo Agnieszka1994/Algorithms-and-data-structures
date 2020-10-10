@@ -1,6 +1,6 @@
 # Min Height BST
 
-This function takes in a non-empty sorted array of distinct integers, constructs a BST from the integers, and returns the root of the BST. The function minimizes the height of the BST.\
+This function takes in a non-empty sorted array of distinct integers, constructs a BST from the integers, and returns the root of the BST. The function minimizes the height of the BST.
 
 The function uses `BST` class implemented in the same file. \
 The `BST` class supports `insert` method used by the function. 

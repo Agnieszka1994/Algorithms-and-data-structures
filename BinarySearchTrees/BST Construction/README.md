@@ -1,10 +1,10 @@
-# Project Title
+# BST Construction
 
 This file contains a class `BST` for a Binary Search Tree. \
 The class supports:
 - Inserting values with the `insert` method.
 - Removing values with the `remove` method; this method remove only the first instance of a given value. Calling the `remove` method on a single-node tree doesn't do anything. 
-- Searching for values with the `contains` method. \
+- Searching for values with the `contains` method. 
 
 Each `BST` node has an integer value, a `left` child node, and a `right` child node. A node is said to be valid `BST` if it satisfies the BST property: its `value` is strictly grater that the value of every node to its left and its `value` is less or equal to the values of every node to its right, and its children nodes are either valid `BST` nodes themselves or `nullptr`/`NULL`.
 
