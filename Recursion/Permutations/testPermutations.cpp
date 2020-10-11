@@ -1,0 +1,146 @@
+#include "pch.h"
+#include "Permutations.cpp"
+
+bool contains(vector<vector<int>> array1, vector<int> array2) {
+    for (vector<int> subArray : array1) {
+        if (array2 == subArray) {
+            return true;
+        }
+    }
+    return false;
+}
+
+TEST(SampleTestCase1, SampleTest) {
+    vector<vector<int>> perms = getPermutations({ 1, 2, 3 });
+    assert(perms.size() == 6);
+    assert(contains(perms, { 1, 2, 3 }));
+    assert(contains(perms, { 1, 3, 2 }));
+    assert(contains(perms, { 2, 1, 3 }));
+    assert(contains(perms, { 2, 3, 1 }));
+    assert(contains(perms, { 3, 1, 2 }));
+    assert(contains(perms, { 3, 2, 1 }));
+};
+
+TEST(SampleTestCase2, SampleTest) {
+    vector<vector<int>> perms = getPermutations({ 1, 2, 3, 4, 5 });
+    assert(contains(perms, {1, 2, 3, 4, 5}));
+    assert(contains(perms, {1, 2, 3, 5, 4}));
+    assert(contains(perms, {1, 2, 4, 3, 5}));
+    assert(contains(perms, {1, 2, 4, 5, 3}));
+    assert(contains(perms, {1, 2, 5, 3, 4}));
+    assert(contains(perms, {1, 2, 5, 4, 3}));
+    assert(contains(perms, {1, 3, 2, 4, 5}));
+    assert(contains(perms, {1, 3, 2, 5, 4}));
+    assert(contains(perms, {1, 3, 4, 2, 5}));
+    assert(contains(perms, {1, 3, 4, 5, 2}));
+    assert(contains(perms, {1, 3, 5, 2, 4}));
+    assert(contains(perms, {1, 3, 5, 4, 2}));
+    assert(contains(perms, {1, 4, 2, 3, 5}));
+    assert(contains(perms, {1, 4, 2, 5, 3}));
+    assert(contains(perms, {1, 4, 3, 2, 5}));
+    assert(contains(perms, {1, 4, 3, 5, 2}));
+    assert(contains(perms, {1, 4, 5, 2, 3}));
+    assert(contains(perms, {1, 4, 5, 3, 2}));
+    assert(contains(perms, {1, 5, 2, 3, 4}));
+    assert(contains(perms, {1, 5, 2, 4, 3}));
+    assert(contains(perms, {1, 5, 3, 2, 4}));
+    assert(contains(perms, {1, 5, 3, 4, 2}));
+    assert(contains(perms, {1, 5, 4, 2, 3}));
+    assert(contains(perms, {1, 5, 4, 3, 2}));
+    assert(contains(perms, {2, 1, 3, 4, 5}));
+    assert(contains(perms, {2, 1, 3, 5, 4}));
+    assert(contains(perms, {2, 1, 4, 3, 5}));
+    assert(contains(perms, {2, 1, 4, 5, 3}));
+    assert(contains(perms, {2, 1, 5, 3, 4}));
+    assert(contains(perms, {2, 1, 5, 4, 3}));
+    assert(contains(perms, {2, 3, 1, 4, 5}));
+    assert(contains(perms, {2, 3, 1, 5, 4}));
+    assert(contains(perms, {2, 3, 4, 1, 5}));
+    assert(contains(perms, {2, 3, 4, 5, 1}));
+    assert(contains(perms, {2, 3, 5, 1, 4}));
+    assert(contains(perms, {2, 3, 5, 4, 1}));
+    assert(contains(perms, {2, 4, 1, 3, 5}));
+    assert(contains(perms, {2, 4, 1, 5, 3}));
+    assert(contains(perms, {2, 4, 3, 1, 5}));
+    assert(contains(perms, {2, 4, 3, 5, 1}));
+    assert(contains(perms, {2, 4, 5, 1, 3}));
+    assert(contains(perms, {2, 4, 5, 3, 1}));
+    assert(contains(perms, {2, 5, 1, 3, 4}));
+    assert(contains(perms, {2, 5, 1, 4, 3}));
+    assert(contains(perms, {2, 5, 3, 1, 4}));
+    assert(contains(perms, {2, 5, 3, 4, 1}));
+    assert(contains(perms, {2, 5, 4, 1, 3}));
+    assert(contains(perms, {2, 5, 4, 3, 1}));
+    assert(contains(perms, {3, 1, 2, 4, 5}));
+    assert(contains(perms, {3, 1, 2, 5, 4}));
+    assert(contains(perms, {3, 1, 4, 2, 5}));
+    assert(contains(perms, {3, 1, 4, 5, 2}));
+    assert(contains(perms, {3, 1, 5, 2, 4}));
+    assert(contains(perms, {3, 1, 5, 4, 2}));
+    assert(contains(perms, {3, 2, 1, 4, 5}));
+    assert(contains(perms, {3, 2, 1, 5, 4}));
+    assert(contains(perms, {3, 2, 4, 1, 5}));
+    assert(contains(perms, {3, 2, 4, 5, 1}));
+    assert(contains(perms, {3, 2, 5, 1, 4}));
+    assert(contains(perms, {3, 2, 5, 4, 1}));
+    assert(contains(perms, {3, 4, 1, 2, 5}));
+    assert(contains(perms, {3, 4, 1, 5, 2}));
+    assert(contains(perms, {3, 4, 2, 1, 5}));
+    assert(contains(perms, {3, 4, 2, 5, 1}));
+    assert(contains(perms, {3, 4, 5, 1, 2}));
+    assert(contains(perms, {3, 4, 5, 2, 1}));
+    assert(contains(perms, {3, 5, 1, 2, 4}));
+    assert(contains(perms, {3, 5, 1, 4, 2}));
+    assert(contains(perms, {3, 5, 2, 1, 4}));
+    assert(contains(perms, {3, 5, 2, 4, 1}));
+    assert(contains(perms, {3, 5, 4, 1, 2}));
+    assert(contains(perms, {3, 5, 4, 2, 1}));
+    assert(contains(perms, {4, 1, 2, 3, 5}));
+    assert(contains(perms, {4, 1, 2, 5, 3}));
+    assert(contains(perms, {4, 1, 3, 2, 5}));
+    assert(contains(perms, {4, 1, 3, 5, 2}));
+    assert(contains(perms, {4, 1, 5, 2, 3}));
+    assert(contains(perms, {4, 1, 5, 3, 2}));
+    assert(contains(perms, {4, 2, 1, 3, 5}));
+    assert(contains(perms, {4, 2, 1, 5, 3}));
+    assert(contains(perms, {4, 2, 3, 1, 5}));
+    assert(contains(perms, {4, 2, 3, 5, 1}));
+    assert(contains(perms, {4, 2, 5, 1, 3}));
+    assert(contains(perms, {4, 2, 5, 3, 1}));
+    assert(contains(perms, {4, 3, 1, 2, 5}));
+    assert(contains(perms, {4, 3, 1, 5, 2}));
+    assert(contains(perms, {4, 3, 2, 1, 5}));
+    assert(contains(perms, {4, 3, 2, 5, 1}));
+    assert(contains(perms, {4, 3, 5, 1, 2}));
+    assert(contains(perms, {4, 3, 5, 2, 1}));
+    assert(contains(perms, {4, 5, 1, 2, 3}));
+    assert(contains(perms, {4, 5, 1, 3, 2}));
+    assert(contains(perms, {4, 5, 2, 1, 3}));
+    assert(contains(perms, {4, 5, 2, 3, 1}));
+    assert(contains(perms, {4, 5, 3, 1, 2}));
+    assert(contains(perms, {4, 5, 3, 2, 1}));
+    assert(contains(perms, {5, 1, 2, 3, 4}));
+    assert(contains(perms, {5, 1, 2, 4, 3}));
+    assert(contains(perms, {5, 1, 3, 2, 4}));
+    assert(contains(perms, {5, 1, 3, 4, 2}));
+    assert(contains(perms, {5, 1, 4, 2, 3}));
+    assert(contains(perms, {5, 1, 4, 3, 2}));
+    assert(contains(perms, {5, 2, 1, 3, 4}));
+    assert(contains(perms, {5, 2, 1, 4, 3}));
+    assert(contains(perms, {5, 2, 3, 1, 4}));
+    assert(contains(perms, {5, 2, 3, 4, 1}));
+    assert(contains(perms, {5, 2, 4, 1, 3}));
+    assert(contains(perms, {5, 2, 4, 3, 1}));
+    assert(contains(perms, {5, 3, 1, 2, 4}));
+    assert(contains(perms, {5, 3, 1, 4, 2}));
+    assert(contains(perms, {5, 3, 2, 1, 4}));
+    assert(contains(perms, {5, 3, 2, 4, 1}));
+    assert(contains(perms, {5, 3, 4, 1, 2}));
+    assert(contains(perms, {5, 3, 4, 2, 1}));
+    assert(contains(perms, {5, 4, 1, 2, 3}));
+    assert(contains(perms, {5, 4, 1, 3, 2}));
+    assert(contains(perms, {5, 4, 2, 1, 3}));
+    assert(contains(perms, {5, 4, 2, 3, 1}));
+    assert(contains(perms, {5, 4, 3, 1, 2}));
+    assert(contains(perms, {5, 4, 3, 2, 1}));
+};

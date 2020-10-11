@@ -1,6 +1,6 @@
 # Number Of Binary Tree Topologies
 
-This function takes in a non-negative integer `n` and returns the number of possible Binary Tree topologies that can be created with exactly `n` nodes.\
+This function takes in a non-negative integer `n` and returns the number of possible Binary Tree topologies that can be created with exactly `n` nodes.
 
 A BT topology is defined as any Binary Tree configuration, irrespective of node values.
 When `n` is equal to `0` there is `1` topology that can be created - the `nullptr`. 
