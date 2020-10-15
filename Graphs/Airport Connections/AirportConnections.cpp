@@ -26,23 +26,19 @@ void depthFirstTraverse(unordered_map<string, Airport*>, string, unordered_map<s
 
 void markUnreachableAirports(unordered_map<string, Airport*>, vector< Airport*>);
 
-void depthFirstAddUnreachable(unordered_map<string, Airport*>, string, 
-							vector<string>*, unordered_map<string, bool>*);
+void depthFirstAddUnreachable(unordered_map<string, Airport*>, string, vector<string>*, unordered_map<string, bool>*);
 
 int getMinNumOfNewConnections(unordered_map<string, Airport*>, vector< Airport*>);
 
 // Main method-----------------------------------------------------------------------------
-int airportConnections(vector<string> airports, vector<vector<string>> routes,
-	string startingAirport) {
+int airportConnections(vector<string> airports, vector<vector<string>> routes, string startingAirport) {
 	unordered_map<string, Airport*> airportGraph = createGraph(airports, routes);
-	vector< Airport*> unreachableAirports = getUnreachableAirports(airportGraph,
-											airports, startingAirport);
+	vector< Airport*> unreachableAirports = getUnreachableAirports(airportGraph, airports, startingAirport);
 	markUnreachableAirports(airportGraph, unreachableAirports);
 	return getMinNumOfNewConnections(airportGraph, unreachableAirports);
 }
 //------------------------------------------------------------------------------------------
-unordered_map<string, Airport*> createGraph(vector<string> airports, 
-								vector<vector<string>> routes) {
+unordered_map<string, Airport*> createGraph(vector<string> airports, vector<vector<string>> routes) {
 	unordered_map<string, Airport*> airportGraph = {};
 	for (string airport : airports) {
 		airportGraph[airport] = new Airport(airport);
@@ -56,8 +52,7 @@ unordered_map<string, Airport*> createGraph(vector<string> airports,
 }
 //------------------------------------------------------------------------------------------
 // get a table of all the airports that cannot be reached from the starting airport
-vector<Airport*> getUnreachableAirports(unordered_map<string, Airport*> graph, 
-																	vector<string> airports, string startAirport) {
+vector<Airport*> getUnreachableAirports(unordered_map<string, Airport*> graph, vector<string> airports, string startAirport) {
 	unordered_map<string, bool> visitedAirports = {};
 	depthFirstTraverse(graph, startAirport, &visitedAirports);
 
@@ -75,8 +70,7 @@ vector<Airport*> getUnreachableAirports(unordered_map<string, Airport*> graph,
 }
 //------------------------------------------------------------------------------------------
 // this is a recursive function that add all reachable airports to the list of visited
-void depthFirstTraverse(unordered_map<string, Airport*> graph, string airport,
-						unordered_map<string, bool>* visitedAirports) {
+void depthFirstTraverse(unordered_map<string, Airport*> graph, string airport, unordered_map<string, bool>* visitedAirports) {
 	//if the airport was already visited - is in the hash table - return
 	if (visitedAirports->find(airport) != visitedAirports->end()) {
 		return;
@@ -91,8 +85,7 @@ void depthFirstTraverse(unordered_map<string, Airport*> graph, string airport,
 // this function add a 'score' to each unreachable airport
 // a number of airports reaachable from a given airport
 // (how many airports it will 'unlock' when it becomes reachable)
-void markUnreachableAirports(unordered_map<string, Airport*> graph, 
-					vector< Airport*> unreachableAirports) {
+void markUnreachableAirports(unordered_map<string, Airport*> graph, vector< Airport*> unreachableAirports) {
 	for (auto airport: unreachableAirports) {
 		string code = airport->code;
 		vector<string> unreachableAirports = {};
@@ -106,9 +99,7 @@ void markUnreachableAirports(unordered_map<string, Airport*> graph,
 //------------------------------------------------------------------------------------------
 // traverse the graph to check how many unreachable 
 // airports will be unlocked from a given airport 
-void depthFirstAddUnreachable(unordered_map<string, Airport*> graph,
-							string airport, vector<string>* unreachable,
-							unordered_map<string, bool>* visitedAirports) {
+void depthFirstAddUnreachable(unordered_map<string, Airport*> graph, string airport, vector<string>* unreachable, unordered_map<string, bool>* visitedAirports) {
 	// if the current airport is reachable - return 
 	// we only iterate through the unreachable airports
 	if (graph[airport]->isReachable) {
@@ -131,10 +122,8 @@ void depthFirstAddUnreachable(unordered_map<string, Airport*> graph,
 	}
 }
 
-int getMinNumOfNewConnections(unordered_map<string, Airport*> graph, 
-								vector< Airport*> unreachableAirports) {
+int getMinNumOfNewConnections(unordered_map<string, Airport*> graph, vector< Airport*> unreachableAirports) {
 	// sort the unreachable airports by number of airports they potentially unlock
-
 	sort(unreachableAirports.begin(), unreachableAirports.end(), 
 			 [](Airport* a1, Airport* a2) -> bool 
 			{ return a2->unreachableAirports.size() <
