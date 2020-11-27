@@ -21,7 +21,7 @@ string = "baddaddoombaddadoomibaddaddoombaddaddoombaddaddoombaddaddoomibaddaddoo
 ```
  ### Sample output 2
  ```javascript
-    [] //no pattern found
+    [] // no pattern found
  ```
  ### Space and Time complexity
  `O(n^2 + m)` time | `O(n + m)` space - where n is the length of the normal string and m is the length of the pattern.
